@@ -1,5 +1,6 @@
 package com.hp.employee.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,12 +17,22 @@ public class EmployeeService {
 @Autowired
 private EmployeeRepository employeeRepository;
 
+private List<Employee> employees = new ArrayList<>();
+
+
+
+
 public List<Employee> getAllEmployee(){
-	 return employeeRepository.findAll();
+	List <Employee> employees = new ArrayList();
+	  employeeRepository.findAll()
+			 .forEach(employees::add);
+	  return employees;
+}
+
+public void AddEmployee(Employee employees) {
+		employeeRepository.save(employees);
 }
 	
-	
-		
 	}
 
 	

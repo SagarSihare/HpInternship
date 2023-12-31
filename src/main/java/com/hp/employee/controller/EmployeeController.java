@@ -29,12 +29,12 @@ public class EmployeeController {
 //	public Employee getEmployee(@PathVariable Long id) {
 //		return employeeservice.getEmployee(id);
 //	}
-//	
-//	@RequestMapping(method=RequestMethod.POST ,value="/Employees")
-//	public void addTopic(@RequestBody Employee employee) {
-//		employeeservice.addEmployee(employee);
-//		
-//	}
+	
+	@RequestMapping(method=RequestMethod.POST ,value="/Employees")
+	public void addEmployee(@RequestBody Employee employees) {
+		employeeservice.AddEmployee(employees);
+		
+	}
 //	
 //	@RequestMapping(method=RequestMethod.PUT ,value="/Employees/{id}")
 //	public void UpdateTopic(@RequestBody Employee employee ,@PathVariable Long id  ) {
