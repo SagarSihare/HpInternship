@@ -17,11 +17,6 @@ public class EmployeeService {
 @Autowired
 private EmployeeRepository employeeRepository;
 
-private List<Employee> employees = new ArrayList<>();
-
-
-
-
 public List<Employee> getAllEmployee(){
 	List <Employee> employees = new ArrayList();
 	  employeeRepository.findAll()
@@ -30,9 +25,11 @@ public List<Employee> getAllEmployee(){
 }
 
 public void AddEmployee(Employee employees) {
-		employeeRepository.save(employees);
-}
+	employeeRepository.save(employees);
 	
+}
+
+
 	}
 
 	
